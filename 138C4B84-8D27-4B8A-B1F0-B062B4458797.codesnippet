@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ftd</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark -- TableView delegates
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return &lt;#count#&gt;;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return &lt;#cell-height#&gt;;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    &lt;#cell-class#&gt; *cell = [tableView dequeueReusableCellWithIdentifier:&lt;#cell-key#&gt; forIndexPath:indexPath];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    &lt;#code#&gt;
+}
+
+#pragma mark -- Lazy
+
+- (UITableView *)mainTableView {
+    if (!_mainTableView) {
+        _mainTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _mainTableView.showsVerticalScrollIndicator = NO;
+        _mainTableView.showsHorizontalScrollIndicator = NO;
+        _mainTableView.tableFooterView = UIView.new;
+        _mainTableView.dataSource = self;
+        _mainTableView.delegate = self;
+        [_mainTableView registerClass:[&lt;#cell-class#&gt; class] forCellReuseIdentifier:&lt;#cell-key#&gt;];
+    }
+    return _mainTableView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>138C4B84-8D27-4B8A-B1F0-B062B4458797</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>TableView 快速构建</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Fast-TableView&amp;Delegates</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
