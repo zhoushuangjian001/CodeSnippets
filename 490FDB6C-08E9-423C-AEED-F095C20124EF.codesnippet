@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ftextfieldlimit</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UITextField*)&lt;#attr#&gt; {
+    if (!_&lt;#attr#&gt;) {
+        UITextField *textField = [UITextField new];
+        textField.secureTextEntry = NO;
+        NSString *placeholder = &lt;#placeholder#&gt;;
+        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:placeholder];
+        [attributeString addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:&lt;#size#&gt;],NSForegroundColorAttributeName:&lt;#UIColor#&gt;} range:NSMakeRange(0, placeholder.length)];
+        textField.attributedPlaceholder = attributeString;
+        textField.delegate = self;
+        textField.keyboardType = UIKeyboardTypeNumberPad;
+        _&lt;#attr#&gt; = textField;
+    }
+    return _&lt;#attr#&gt;;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if(textField.text.length == 0 &amp;&amp; string.intValue == 0) return NO;
+    NSString *handle = [NSString stringWithFormat:@"%d",textField.text.intValue];
+    textField.text = handle.intValue == 0?@"":handle;
+    if (handle.length &gt; (&lt;#digit#&gt; - 1) &amp;&amp; string.length != 0) return NO;
+    return YES;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>490FDB6C-08E9-423C-AEED-F095C20124EF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>TextField 限制数字输入位数</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Fast-TextField-LimitDigit</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

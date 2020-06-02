@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ftextfieldeditchange</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UITextField*)&lt;#attr#&gt; {
+    if (!_&lt;#attr#&gt;) {
+        UITextField *textField = [UITextField new];
+        textField.secureTextEntry = NO;
+        NSString *placeholder = &lt;#placeholder#&gt;;
+        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:placeholder];
+        [attributeString addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:&lt;#size#&gt;],NSForegroundColorAttributeName:&lt;#UIColor#&gt;} range:NSMakeRange(0, placeholder.length)];
+        textField.attributedPlaceholder = attributeString;
+        [textField addTarget:self action:@selector(textFieldEditChange:) forControlEvents:UIControlEventEditingChanged];
+        _&lt;#attr#&gt; = textField;
+    }
+    return _&lt;#attr#&gt;;
+}
+
+- (void)textFieldEditChange:(UITextField *)textfield {
+    &lt;#code#&gt;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>18EF2C35-B32E-47DB-8240-2C4B8C8D757C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>TextField 编辑改变监控</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Fast-TextField-EditingChanged</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

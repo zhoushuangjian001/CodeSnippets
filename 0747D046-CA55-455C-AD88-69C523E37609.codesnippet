@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ftextfield</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UITextField*)&lt;#attr#&gt; {
+    if (!_&lt;#attr#&gt;) {
+        UITextField *textField = [UITextField new];
+        textField.secureTextEntry = NO;
+        NSString *placeholder = &lt;#placeholder#&gt;;
+        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:placeholder];
+        [attributeString addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:&lt;#size#&gt;],NSForegroundColorAttributeName:&lt;#UIColor#&gt;} range:NSMakeRange(0, placeholder.length)];
+        textField.attributedPlaceholder = attributeString;
+        _&lt;#attr#&gt; = textField;
+    }
+    return _&lt;#attr#&gt;;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0747D046-CA55-455C-AD88-69C523E37609</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>TextField 快速构建</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Fast-TextField</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

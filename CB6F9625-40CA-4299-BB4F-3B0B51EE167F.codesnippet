@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>fbtnt</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIButton*)&lt;#attr#&gt; {
+    if (!_&lt;#attr#&gt;) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setTitle:&lt;#title#&gt; forState:UIControlStateNormal];
+        button.titleLabel.font = &lt;#UIFont#&gt; ;
+        [button addTarget:self action:@selector(&lt;#selector#&gt;) forControlEvents:UIControlEventTouchUpInside];
+        _&lt;#attr#&gt; = button;
+    }
+    return _&lt;#attr#&gt;;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CB6F9625-40CA-4299-BB4F-3B0B51EE167F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Button 只有文字</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Fast-Button-Title</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
