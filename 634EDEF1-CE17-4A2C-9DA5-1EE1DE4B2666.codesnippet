@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string></string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark -- ScrollView Delegates
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+}
+
+#pragma mark -- Lazy ScrollView
+
+- (UIScrollView *)mainScrollView {
+    if (!_mainScrollView) {
+        _mainScrollView = [UIScrollView new];
+        _mainScrollView.backgroundColor = UIColor.redColor;
+        _mainScrollView.showsHorizontalScrollIndicator = NO;
+        _mainScrollView.showsVerticalScrollIndicator = NO;
+        // Add ContentView
+        [_mainScrollView addSubview:self.scrollContentView];
+        [self.scrollContentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(_mainScrollView);
+            make.width.equalTo(_mainScrollView);
+        }];
+    }
+    return _mainScrollView;
+}
+
+- (UIView*)scrollContentView {
+    if (!_scrollContentView) {
+        _scrollContentView = [UIView new];
+        // Add scrollView elements in hear
+    }
+    return _scrollContentView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>634EDEF1-CE17-4A2C-9DA5-1EE1DE4B2666</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code Snippet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
